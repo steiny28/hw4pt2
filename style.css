@@ -1,0 +1,165 @@
+/*
+File: style.css 
+GUI Assignment: Dynamic Multiplication Table 
+Nicole Ramirez, UMass Lowell Computer Science, nicole_ramirez@student.uml.edu 
+Copyright (c) 2024 by Nicole Ramirez. All rights reserved. May be freely copied or 
+excerpted for educational purposes with credit to the author. 
+*/
+
+/* Set the font, background color, and layout for the body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1d1e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+/* Style the main container */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1000px;
+    overflow: hidden;
+}
+
+/* Style the header */
+h1 {
+    text-align: center;
+    color: #333;
+}
+/* Style the form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+/* Style the form labels */
+label {
+    margin-top: 10px;
+    color: #555;
+}
+/* Style the form inputs */
+input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+/* Style the buttons */
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+/* Change button background color on hover */
+button:hover {
+    background-color: #0056b3;
+}
+/* Style the error message */
+#errorMessage {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+}
+/* Style the table container */
+#tableContainer {
+    overflow: auto;
+    max-height: 400px;
+    margin-top: 20px;
+    border: 1px solid #bbc9e9;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #89ccda;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Wrapper for the table to add scrolling */
+.table-wrapper {
+    overflow: auto;
+    max-height: 400px;
+}
+/* Style the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    table-layout: auto;
+}
+/* Style the table headers and cells */
+th, td {
+    padding: 12px;
+    border: 1px solid #89ccda;
+    text-align: center;
+    font-size: 16px;
+    word-wrap: break-word;
+    min-width: 50px; 
+}
+/* Style for table headers */
+th {
+    background-color: #fb7279; 
+    color: #000;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+/* Style for the first column of headers */
+th:first-child {
+    left: 0;
+    z-index: 3;
+}
+
+/* Style for even table rows */
+tr:nth-child(even) {
+    background-color: #E6E6FA; 
+}
+
+
+/* Style for odd table rows */
+tr:nth-child(odd) {
+    background-color: #FFB6C1; 
+}
+
+/* Style for table rows on hover */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Style for sticky first column */
+th, td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: #89ccda;
+    z-index: 1;
+}
+
+/* Ensure the tabs navigation is scrollable */
+.ui-tabs .ui-tabs-nav {
+    overflow: auto;
+}
+
+/* Style for each tab in the tabs navigation */
+.ui-tabs .ui-tabs-nav li {
+    float: left;
+    position: relative;
+}
+
+/* Style for the close icon on tabs */
+.ui-tabs .ui-tabs-nav li .ui-icon-close {
+    float: right;
+    cursor: pointer;
+}
+
+/* Style for tab links with space for the close icon */
+.ui-tabs .ui-tabs-nav li a {
+    padding-right: 20px; /* Make space for the close icon */
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- 
+File: index.html 
+GUI Assignment: Dynamic Multiplication Table 
+Nicole Ramirez, UMass Lowell Computer Science, nicole_ramirez@student.uml.edu 
+Copyright (c) 2024 by Nicole Ramirez. All rights reserved. May be freely copied or 
+excerpted for educational purposes with credit to the author. 
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Multiplication Table</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main container for the web page content -->
+    <div class="container">
+        <h1>Dynamic Multiplication Table</h1>
+         <!-- Form to input the parameters for the multiplication table -->
+        <form id="tableForm">
+            <label for="startMultiplier">Start Multiplier:</label>
+            <input type="number" id="startMultiplier" name="startMultiplier" required>
+            <div id="startMultiplierSlider"></div>
+            <label for="endMultiplier">End Multiplier:</label>
+            <input type="number" id="endMultiplier" name="endMultiplier" required>
+            <div id="endMultiplierSlider"></div>
+            <label for="startMultiplicand">Start Multiplicand:</label>
+            <input type="number" id="startMultiplicand" name="startMultiplicand" required>
+            <div id="startMultiplicandSlider"></div>
+            <label for="endMultiplicand">End Multiplicand:</label>
+            <input type="number" id="endMultiplicand" name="endMultiplicand" required>
+            <div id="endMultiplicandSlider"></div>
+            <button type="submit">Generate Table</button>
+        </form>
+        <!-- Div to display error messages -->
+        <div id="errorMessage"></div>
+        <div id="tabs">
+            <ul>
+                <li><a href="#tabs-1">Table Parameters</a></li>
+            </ul>
+            <div id="tabs-1">
+                <p>Enter parameters to generate the table.</p>
+            </div>
+        </div>
+        <button id="removeSelectedTabs">Remove Selected Tabs</button>
+        <div id="tableContainer"></div>
+    </div>
+<!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- jQuery UI library -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- jQuery Validation plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+ <!-- Link to the external JavaScript file for custom scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
